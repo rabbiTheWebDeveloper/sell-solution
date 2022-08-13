@@ -1,0 +1,279 @@
+#side_bar.Admin{
+    width: 320px;
+    height: 100vh;
+    background: #11143D;
+    box-shadow: 0px 41.7776px 58.4887px rgba(0, 0, 0, 0.10064), 0px 22.3363px 31.2708px rgba(0, 0, 0, 0.083455), 0px 12.5216px 17.5302px rgba(0, 0, 0, 0.07), 0px 6.6501px 9.31014px rgba(0, 0, 0, 0.056545), 0px 2.76726px 3.87416px rgba(0, 0, 0, 0.0393604);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#side_bar.Admin .logo {
+    padding: 25px;
+    border-bottom: none;
+    text-align: center;
+}
+
+#side_bar img {
+    height: 50px;
+}
+
+#side_bar a svg{
+    font-size: 30px;
+}
+
+#side_bar .menuItem {
+    padding: 25px;
+    overflow-y: scroll;
+    height: 88vh;
+}
+
+#side_bar .menuItem li{
+    margin-bottom: 10px;
+}
+
+#side_bar.Admin .menuItem a{
+    width: 100%;
+    background: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: #FFF;
+
+}
+
+#side_bar.Admin .menuItem a.active{
+    background: var(--admin_bg);
+    color: #FFF;
+}
+
+#side_bar.Admin .menuItem a .svg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+#side_bar .menuItem a svg path{
+    fill: #FFF;
+}
+
+#side_bar .menuItem a.active .svg {
+    background: #FFF;
+}
+
+#side_bar .menuItem a.active .svg svg path{
+    fill: var(--admin_bg);
+}
+
+#side_bar .menuItem a:hover{
+    background: var(--admin_bg);
+    color: #FFF;
+}
+
+#side_bar .menuItem a:hover svg path{
+    fill: #FFF;
+    border: 1px solid #FFF;
+}
+/* Dropdown Part */
+
+.dropdown-toggle::after{
+    display: none;
+}
+
+.dropdown_part{
+    position: relative;
+}
+
+ul.dropdown-menu {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: 0px 2px 5px 6px rgb(0 0 0 / 6%);
+}
+
+ul.dropdown-menu.show {
+    transform: translate(-90px, 27px) !important;
+}
+
+ul.dropdown-menu li a{
+    padding: 5px 13px;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text_color);
+}
+
+ul.dropdown-menu li:first-child a{
+    border-radius: 10px 10px 0px 0px;
+}
+
+ul.dropdown-menu li:last-child a{
+    border-radius: 0px 0px 10px 10px;
+}
+
+ul.dropdown-menu li a:hover{
+    background: var(--bg_color2);
+    color: var(--bg_color);
+}
+
+.up_arrow {
+    position: absolute;
+    top: -16px;
+    right: 10px;
+    display: none;
+}
+#side_bar.Admin{
+    width: 320px;
+    height: 100vh;
+    background: #11143D;
+    box-shadow: 0px 41.7776px 58.4887px rgba(0, 0, 0, 0.10064), 0px 22.3363px 31.2708px rgba(0, 0, 0, 0.083455), 0px 12.5216px 17.5302px rgba(0, 0, 0, 0.07), 0px 6.6501px 9.31014px rgba(0, 0, 0, 0.056545), 0px 2.76726px 3.87416px rgba(0, 0, 0, 0.0393604);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#side_bar.Admin .logo {
+    padding: 25px;
+    border-bottom: none;
+    text-align: center;
+}
+
+#side_bar img {
+    height: 50px;
+}
+
+#side_bar a svg{
+    font-size: 30px;
+}
+
+#side_bar .menuItem {
+    padding: 25px;
+    overflow-y: scroll;
+    height: 88vh;
+}
+
+#side_bar .menuItem li{
+    margin-bottom: 10px;
+}
+
+#side_bar.Admin .menuItem a{
+    width: 100%;
+    background: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: #FFF;
+
+}
+
+#side_bar.Admin .menuItem li.active a{
+    background: var(--admin_bg);
+    color: #FFF;
+}
+
+#side_bar.Admin .menuItem a .svg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+#side_bar .menuItem a svg path{
+    fill: #FFF;
+}
+
+#side_bar .menuItem a.active .svg {
+    background: #FFF;
+}
+
+#side_bar .menuItem a.active .svg svg path{
+    fill: var(--admin_bg);
+}
+
+#side_bar .menuItem a:hover{
+    background: var(--admin_bg);
+    color: #FFF;
+}
+
+#side_bar .menuItem a:hover svg path{
+    fill: #FFF;
+    border: 1px solid #FFF;
+}
+
+#side_bar.Admin .menuItem {
+    transition: all linear .5s;
+}
+
+#side_bar.Admin .menuItem a{
+    transition: all linear .5s;
+}
+
+#side_bar ul.dropdown-menu.show {
+    position: unset !important;
+    top: 0 !important;
+    transform: unset !important;
+    left: 0 !important;
+    border-radius: 0;
+    background: #282B50;
+    border-radius: 10px;
+    transition: all linear .5s;
+}
+
+#side_bar.Admin .menuItem a .arrow{
+    position: absolute;
+    right: 10px;
+}
+
+#side_bar.Admin .menuItem a .arrow svg{
+    font-size: 20px;
+}
+
+#side_bar.Admin .menuItem a.show .arrow svg{
+    transform: rotate(-180deg);
+}
+
+#side_bar ul.dropdown-menu.show li{
+    position: relative;
+}
+
+#side_bar ul.dropdown-menu.show li::after {
+    position: absolute;
+    content: '';
+    top: 22px;
+    left: 35px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #D9D9D9;
+}
+
+#side_bar ul.dropdown-menu.show li a{
+    padding: 15px 30px;
+    padding-left: 60px;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START nab_bar PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+#nab_bar {
+    background: #FFFFFF;
+    box-shadow: 0px 7px 12px -5px rgba(0, 0, 0, 0.25);
+    padding: 20px 0;
+}
+
+.menu_text h1 span{
+    font-size: 32px;
+    color: var(--header_text);
+    font-weight: 600;
+}
+

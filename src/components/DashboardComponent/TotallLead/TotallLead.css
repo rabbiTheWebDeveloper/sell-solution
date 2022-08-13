@@ -1,0 +1,128 @@
+#Total_order.Admin .Total_order_item {
+    background: #FFFFFF;
+    box-shadow: 0px 4.57994px 6.41192px rgba(0, 0, 0, 0.056545);
+    border-radius: 15px;
+    padding: 25px;
+    /* padding-bottom: 100px; */
+    position: relative;
+    margin-bottom: 30px;
+    min-height: 260px;
+    z-index: 9;
+}
+
+#Total_order .Total_order_item.bgBlue{
+    background: var(--admin_bg);
+}
+
+#Total_order .Total_order_item.bgParple{
+    background: var(--admin_bg2);
+}
+
+#Total_order .Total_order_item.bgGreen{
+    background: #66C21D;
+}
+
+#Total_order .Total_order_item.bgRed{
+    background: #F55F5F;
+}
+
+#Total_order.Admin .Total_order_item h3 {
+    color: #FFF;
+    font-size: 16px;
+    line-height: 34px;
+}
+
+#Total_order.Admin .Total_order_item h2{
+    color: #FFF;
+}
+
+#Total_order.Admin .Total_order_item h2 span{
+    font-size: 30px;
+    color: #FFF;
+    font-weight: 600;
+}
+
+#Total_order.Admin .dropdown_part span {
+    cursor: pointer;
+    color: #FFF;
+}
+
+#Total_order.Admin .last_part p{
+    color: #FFF;
+    font-weight: 400;
+}
+
+#Total_order.Admin .Total_order_item .last_part ul li span.percent{
+    color: #FFF;
+}
+
+#Total_order.Admin .last_part svg path{
+    fill: #FFF;
+}
+
+#Total_order.Admin .Total_order_item h3 svg path{
+    fill: #FFF;
+}
+
+#Total_order.Admin .Total_order_item .order_carb {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.Total_order_item .header_part h3 svg{
+    margin-right: 5px;
+}
+
+.dropdown_part span{
+    cursor: pointer;
+}
+
+.dropdown_part .arrow{
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--border_color);
+    box-shadow: 0px 0px 4.82092px #E4E2E2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Total_order_item .last_part ul li{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.Total_order_item .last_part ul li span{
+    font-size: 16px;
+}
+
+.Total_order_item .last_part ul li span.percent{
+    color: #5DCA08;
+}
+
+.Total_order_item .last_part ul li span.percent.red{
+    color: #FE0707;
+}
+
+.Total_order_item h2.color{
+    color: #5DCA08;
+}
+
+/* openTicket */
+#Total_order.openTicket .Total_order_item {
+    padding-bottom: 25px;
+}
+
+#Total_order.openTicket .Total_order_item .last_part ul li p{
+    font-size: 13px;
+}
+
+#Total_order.openTicket .Total_order_item .last_part ul li span{
+    font-size: 13px;
+}

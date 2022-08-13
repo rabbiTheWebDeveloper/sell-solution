@@ -1,0 +1,1548 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0;
+    clear: both;
+    color: #000000;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+input:focus, select:focus{
+    outline: none;
+}
+
+.btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    /* background: #F6F6F6; */
+    background: #FFF;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #FFF;
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FFF;
+    display: none;
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+:root {
+    --bg_color:#A16CF8; 
+    --bg_color2:#F3ECFF;
+    --header_text:#407EF9;
+    --text_color:#747474; 
+    --text_color2:#A3A3A3; 
+    --border_color:#EDEDED; 
+    --admin_bg:#556FF6; 
+    --admin_bg2:#A16CF8; 
+
+}
+
+.green{
+    color: #5DCA08;
+}
+
+.blue{
+    color: #407EF9;
+}
+
+.parpel{
+    color: #A16CF8;
+}
+
+.red{
+    color: #FE0707;
+}
+
+.bgss {
+    background: #F5F5F5;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0;
+}
+
+.custom_width {
+    max-width: calc(100% - 390px);
+    margin-right: 40px;
+}
+
+.custome_input .search{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+} 
+
+/*---------------- Common Css ----------------*/
+
+h1{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--text_color);
+}
+
+h2{
+    font-weight: 600;
+    font-size: 66px;
+    line-height: 100px;
+    color: var(--header_text);
+}
+
+h3{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--text_color);
+}
+
+h4{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--text_color);
+}
+
+h5{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text_color);
+}
+
+a{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--header_text);
+    display: inline-block;
+    transition: all linear .2s;
+}
+
+p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text_color2);
+}
+
+span{
+    font-weight: 400;
+    font-size: 13.5948px;
+    line-height: 20px;
+    color: var(--bg_color);
+
+}
+
+svg{
+    transition: all linear .2s;
+}
+
+input{
+    width: 100%;
+    background: #F5F5F5;
+    border-radius: 10px;
+    padding: 15px 20px;
+    border: none;
+    color: var(--text_color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+select{
+    width: 100%;
+    background: #FFF;
+    border-radius: 10px;
+    padding: 15px 20px;
+    border: none;
+    color: var(--text_color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px; 
+}
+
+input::placeholder{
+    color: #B9B9B9;
+}
+
+label{
+    width: 100%;
+    border: none;
+    color: var(--text_color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+
+.d_flex{
+    display: flex;
+    align-items: center;
+}
+
+.d_justify{
+    justify-content: space-between;
+}
+
+.section_gaps{
+    margin-top: 40px;
+}
+
+.custome_input{
+    position: relative;
+}
+
+
+button{
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--header_text);
+    color: #FFF;
+    padding: 8px 30px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+    transition: all linear .2s;
+}
+
+button:hover{
+    background: var(--bg_color);
+}
+
+/* Dropdown Part */
+
+.dropdown-toggle::after{
+    display: none;
+}
+
+.dropdown_part{
+    position: relative;
+}
+
+ul.dropdown-menu {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: 0px 2px 5px 6px rgb(0 0 0 / 6%);
+}
+
+ul.dropdown-menu.show {
+    transform: translate(-90px, 27px) !important;
+}
+
+ul.dropdown-menu li a{
+    padding: 5px 13px;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text_color);
+}
+
+ul.dropdown-menu li:first-child a{
+    border-radius: 10px 10px 0px 0px;
+}
+
+ul.dropdown-menu li:last-child a{
+    border-radius: 0px 0px 10px 10px;
+}
+
+ul.dropdown-menu li a:hover{
+    background: var(--bg_color2);
+    color: var(--bg_color);
+}
+
+.up_arrow {
+    position: absolute;
+    top: -16px;
+    right: 10px;
+    display: none;
+}
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START Side bar PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+#side_bar.Admin{
+    width: 320px;
+    height: 100vh;
+    background: #11143D;
+    box-shadow: 0px 41.7776px 58.4887px rgba(0, 0, 0, 0.10064), 0px 22.3363px 31.2708px rgba(0, 0, 0, 0.083455), 0px 12.5216px 17.5302px rgba(0, 0, 0, 0.07), 0px 6.6501px 9.31014px rgba(0, 0, 0, 0.056545), 0px 2.76726px 3.87416px rgba(0, 0, 0, 0.0393604);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#side_bar.Admin .logo {
+    padding: 25px;
+    border-bottom: none;
+    text-align: center;
+}
+
+#side_bar img {
+    height: 50px;
+}
+
+#side_bar a svg{
+    font-size: 30px;
+}
+
+#side_bar .menuItem {
+    padding: 25px;
+    overflow-y: scroll;
+    height: 88vh;
+}
+
+#side_bar .menuItem li{
+    margin-bottom: 10px;
+}
+
+#side_bar.Admin .menuItem a{
+    width: 100%;
+    background: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: #FFF;
+
+}
+
+#side_bar.Admin .menuItem a.active{
+    background: var(--admin_bg);
+    color: #FFF;
+}
+
+#side_bar.Admin .menuItem a .svg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+#side_bar .menuItem a svg path{
+    fill: #FFF;
+}
+
+#side_bar .menuItem a.active .svg {
+    background: #FFF;
+}
+
+#side_bar .menuItem a.active .svg svg path{
+    fill: var(--admin_bg);
+}
+
+#side_bar .menuItem a:hover{
+    background: var(--admin_bg);
+    color: #FFF;
+}
+
+#side_bar .menuItem a:hover svg path{
+    fill: #FFF;
+    border: 1px solid #FFF;
+}
+
+#side_bar.Admin .menuItem {
+    transition: all linear .5s;
+}
+
+#side_bar.Admin .menuItem a{
+    transition: all linear .5s;
+}
+
+#side_bar ul.dropdown-menu.show {
+    position: unset !important;
+    top: 0 !important;
+    transform: unset !important;
+    left: 0 !important;
+    border-radius: 0;
+    background: #282B50;
+    border-radius: 10px;
+    transition: all linear .5s;
+}
+
+#side_bar.Admin .menuItem a .arrow{
+    position: absolute;
+    right: 10px;
+}
+
+#side_bar.Admin .menuItem a .arrow svg{
+    font-size: 20px;
+}
+
+#side_bar.Admin .menuItem a.show .arrow svg{
+    transform: rotate(-180deg);
+}
+
+#side_bar ul.dropdown-menu.show li{
+    position: relative;
+}
+
+#side_bar ul.dropdown-menu.show li::after {
+    position: absolute;
+    content: '';
+    top: 22px;
+    left: 35px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #D9D9D9;
+}
+
+#side_bar ul.dropdown-menu.show li a{
+    padding: 15px 30px;
+    padding-left: 60px;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START nab_bar PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+#nab_bar {
+    background: #FFFFFF;
+    box-shadow: 0px 7px 12px -5px rgba(0, 0, 0, 0.25);
+    padding: 20px 0;
+}
+
+.menu_text h1 span{
+    font-size: 32px;
+    color: var(--header_text);
+    font-weight: 600;
+}
+
+
+/* menu_settings */
+.menu_settings{
+    margin-left: 50px;
+}
+
+.menu_settings .notification{
+    position: relative;
+    display: inline-block;
+}
+
+.menu_settings .notification .notification_alert{
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #FE0707;
+    border-radius: 50%;
+}
+
+.profile_part img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START Login PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#login .container{
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+#login .row{
+    --bs-gutter-x: 0;
+}
+
+.left_login {
+    padding: 100px 200px;
+    text-align: center;
+    background: #FFF;
+    height: 100vh;
+}
+
+.left_login.register {
+    padding: 100px 200px;
+    text-align: center;
+    background: #FFF;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#login .img img{
+    height: 80px;
+}
+
+.left_login h3{
+    margin-top: 10px;
+}
+
+.left_login p {
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 70%;
+}
+
+#login .form_part{
+    margin-top: 60px;
+    text-align: left;
+}
+
+#login .form_part .custome_input{
+    padding-bottom: 20px;
+}
+
+#login .form_part .custome_input button{
+    color: #FFF;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+}
+
+#login .form_part .custome_input a.forgate_pass{
+    margin-top: 20px;
+    width: 100%;
+}
+
+#login .form_part .custome_input a{
+    text-align: right;
+}
+
+#login .form_part .custome_input p{
+    text-align: center;
+}
+
+#login .form_part p.logInSocial{
+    font-weight: 600;
+    font-size: 14px;
+    color: #888888;
+}
+
+#login .form_part .custome_input .logInSocialLink{
+    text-align: center;
+    margin-top: 12px;
+}
+
+#login .form_part .custome_input .logInSocialLink a svg{
+    height: 40px;
+}
+
+#login .right_login {
+    background: linear-gradient(180deg, #3737CA 0%, #1F4DD9 100%);
+    padding: 100px;
+    text-align: center;
+    height: 100vh;
+}
+
+#login .right_login_content{
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+#login .right_login_content img{
+    width: 100%;
+    height: auto;
+}
+
+#login .owl-dots{
+    margin-top: 50px;
+}
+
+.owl-dots {
+    text-align: center;
+}
+
+.owl-dots button{
+    margin-top: 0;
+}
+
+.owl-dots span{
+    width: 12px;
+    height: 12px;
+    margin: 5px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    transition: all linear .3s;
+    border-radius: 30px;
+}
+
+.owl-dot.active span{
+    background: var(--header_text);
+}
+
+#login .form_part .custome_input p a {
+    margin-left: 5px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START Admin_Banner PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+.banner_slider {
+    background: #F4FEFF;
+    box-shadow: 0px 4.69076px 6.56707px rgba(0, 0, 0, 0.056545);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.banner_slider .owl-dot.active span {
+    background: var(--admin_bg2);
+}
+
+#Admin_Banner .NoticeBoard {
+    background: #FFFFFF;
+    box-shadow: 0px 4.69076px 6.56707px rgba(0, 0, 0, 0.056545);
+    border-radius: 15px;
+    padding: 20px;
+    height: 100%;
+}
+
+#Admin_Banner .NoticeBoard h4{
+    color: var(--header_text);
+}
+
+#Admin_Banner .NoticeBoard h4 svg{
+    margin-right: 10px;
+}
+
+#Admin_Banner .NoticeBoard ul{
+    margin-top: 20px;
+}
+
+#Admin_Banner .NoticeBoard ul li{
+    padding: 15px 30px;
+    padding-right: 15px;
+    border-radius: 13px;
+    position: relative;
+}
+
+#Admin_Banner .NoticeBoard ul li.bg{
+    background: #F5F5F5;
+}
+
+#Admin_Banner .NoticeBoard ul li::after {
+    position: absolute;
+    content: '';
+    left: 10px;
+    top: 23px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--admin_bg2);
+}
+
+#Admin_Banner .NoticeBoard ul li p{
+    font-size: 14px;
+}
+
+#Admin_Banner .NoticeBoard .left{
+    width: 55%;
+}
+
+#Admin_Banner .NoticeBoard .right{
+    width: 45%;
+    text-align: right;
+}
+
+#Admin_Banner .NoticeBoard .left span{
+    font-size: 14px;
+}
+
+#Admin_Banner .NoticeBoard .right span{
+    font-size: 12px;
+    color: var(--text_color2);
+}
+
+#Admin_Banner .NoticeBoard .right span{
+    margin-right: 10px;
+}
+
+#Admin_Banner .NoticeBoard .right span:last-child{
+    margin-right: 0;
+}
+
+#Admin_Banner .owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    height: 400px;
+}
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START Total order PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+#Total_order.Admin .Total_order_item {
+    background: #FFFFFF;
+    box-shadow: 0px 4.57994px 6.41192px rgba(0, 0, 0, 0.056545);
+    border-radius: 15px;
+    padding: 25px;
+    /* padding-bottom: 100px; */
+    position: relative;
+    margin-bottom: 30px;
+    min-height: 260px;
+    z-index: 9;
+}
+
+#Total_order .Total_order_item.bgBlue{
+    background: var(--admin_bg);
+}
+
+#Total_order .Total_order_item.bgParple{
+    background: var(--admin_bg2);
+}
+
+#Total_order .Total_order_item.bgGreen{
+    background: #66C21D;
+}
+
+#Total_order .Total_order_item.bgRed{
+    background: #F55F5F;
+}
+
+#Total_order.Admin .Total_order_item h3 {
+    color: #FFF;
+    font-size: 16px;
+    line-height: 34px;
+}
+
+#Total_order.Admin .Total_order_item h2{
+    color: #FFF;
+}
+
+#Total_order.Admin .Total_order_item h2 span{
+    font-size: 30px;
+    color: #FFF;
+    font-weight: 600;
+}
+
+#Total_order.Admin .dropdown_part span {
+    cursor: pointer;
+    color: #FFF;
+}
+
+#Total_order.Admin .last_part p{
+    color: #FFF;
+    font-weight: 400;
+}
+
+#Total_order.Admin .Total_order_item .last_part ul li span.percent{
+    color: #FFF;
+}
+
+#Total_order.Admin .last_part svg path{
+    fill: #FFF;
+}
+
+#Total_order.Admin .Total_order_item h3 svg path{
+    fill: #FFF;
+}
+
+#Total_order.Admin .Total_order_item .order_carb {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.Total_order_item .header_part h3 svg{
+    margin-right: 5px;
+}
+
+.dropdown_part span{
+    cursor: pointer;
+}
+
+.dropdown_part .arrow{
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--border_color);
+    box-shadow: 0px 0px 4.82092px #E4E2E2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Total_order_item .last_part ul li{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.Total_order_item .last_part ul li span{
+    font-size: 16px;
+}
+
+.Total_order_item .last_part ul li span.percent{
+    color: #5DCA08;
+}
+
+.Total_order_item .last_part ul li span.percent.red{
+    color: #FE0707;
+}
+
+.Total_order_item h2.color{
+    color: #5DCA08;
+}
+
+/* openTicket */
+#Total_order.openTicket .Total_order_item {
+    padding-bottom: 25px;
+}
+
+#Total_order.openTicket .Total_order_item .last_part ul li p{
+    font-size: 13px;
+}
+
+#Total_order.openTicket .Total_order_item .last_part ul li span{
+    font-size: 13px;
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START chart Js PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+#Total_order.Admin #myChart {
+    width: 70% !important;
+    height: 600px !important;
+    object-fit: fill;
+}
+
+#Total_order.Admin.openTicket .Total_order_item h3{
+    color: var(--text_color2);
+}
+
+#Total_order.Admin.openTicket .Total_order_item .header_part h3 svg path{
+    fill: var(--text_color2);
+}
+
+#Total_order.Admin .SolvedTicket {
+    margin-left: 50px;
+}
+
+#Total_order.Admin.openTicket  .middle_part{
+    align-items: flex-start;
+}
+
+#Total_order.Admin.openTicket  .middle_part ul{
+    margin-top: 10px;
+}
+
+#Total_order.Admin.openTicket  .middle_part ul li{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#Total_order.Admin.openTicket  .middle_part ul li:last-child{
+    margin-bottom: 0;
+}
+
+#Total_order.Admin.openTicket  .middle_part ul li::after {
+    position: absolute;
+    content: '';
+    top: 10px;
+    left: -20px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--admin_bg);
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START Top Selling Products PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START ClientList PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+#ClientList .FilterBy{
+    background: #F5F5F5;
+    border-radius: 10px;
+    padding: 20px;
+    justify-content: flex-end;
+}
+
+#ClientList .FilterBy h3 {
+    font-weight: 400;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#ClientList .FilterBy .dropdown_part {
+    background: #FFF;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.table_part table tbody tr td img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#ClientList .FilterBy .FilterBy_item{
+    margin-right: 20px;
+}
+
+#ClientList .FilterBy .FilterBy_item:last-child{
+    margin-right: 0px;
+}
+
+#ClientList .FilterBy .dropdown_part span{
+    color: var(--text_color);
+}
+
+#ClientList .FilterBy .dropdown_part .arrow{
+    background: none;
+    box-shadow: none;
+}
+
+#ClientList .FilterBy .FilterBy_item .custome_input input {
+    background: #FFF;
+    width: 350px;
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.Admin .FilterBy a.CreateInvoice{
+    background: var(--admin_bg);
+    color: #FFF;
+    font-size: 16px;
+    padding: 3px 30px;
+    border-radius: 5px;
+}
+
+.FilterBy a.CreateInvoice svg{
+    margin-left: 5px;
+}
+
+.table_part table {
+    background: #FFF;
+    border-radius: 10px;
+}
+
+.table_part table tbody tr{
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-top: 10px;
+}
+
+.table_part table tbody tr th{
+    font-size: 15px;
+    color: #000;
+    font-weight: 600;
+    padding: 20px 15px;
+    border-bottom: 1px solid var(--border_color);
+}
+
+.table_part table tbody tr td{
+    font-size: 14px;
+    color: var(--text_color);
+    font-weight: 400;
+    padding: 15px;
+    border-bottom: 0;
+    border-bottom: 1px solid var(--border_color);
+    vertical-align: middle;
+}
+
+.table_part table tbody tr td a{
+    background: var(--bg_color);
+    color: #FFF;
+    font-size: 14px;
+    padding: 2px 20px;
+    border-radius: 5px;
+}
+
+.table_part table tbody tr td.action a{
+    background: none;
+}
+
+.table_part table tbody tr td.img a{
+    background: none;
+    padding: 0;
+}
+
+.table_part table tbody tr td .dropdown_part span {
+    color: var(--bg_color);
+    font-weight: 600;
+    border: 1px solid var(--border_color);
+    text-align: center;
+    padding: 2px 10px;
+    border-radius: 5px;
+    max-width: 100px;
+}
+
+.table_part table tbody tr td .dropdown_part .arrow{
+    background: none;
+    box-shadow: none;
+}
+
+.table_part table tbody tr td .dropdown_part a {
+    background: #FFF;
+    color: var(--text_color);
+    padding: 8px 15px;
+    box-shadow: none;
+}
+
+.table_part table tbody tr td .dropdown_part a:hover{
+    background: var(--bg_color2);
+    color: var(--bg_color);
+}
+
+.table_part table tbody tr td ul.dropdown-menu {
+    max-width: 180px;
+}
+
+.table_part table input{
+    font-size: 14px;
+    padding: 5px 15px;
+}
+
+.table_part table input::placeholder{
+    font-size: 14px;
+}
+
+#ClientList.openTicket.Admin .header_part .svg{
+    margin-right: 10px;
+}
+
+#ClientList.openTicket.Admin .header_part h3{
+    font-size: 20px;
+    color: var(--header_text);
+    line-height: 32px;
+}
+
+#ClientList.Admin .FilterBy{
+    background: #F5F5F5;
+    border-radius: 10px;
+    padding: 20px;
+    justify-content: flex-end;
+}
+
+#ClientList.Admin .FilterBy h3{
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+#ClientList.Admin .FilterBy .dropdown_part {
+    background: #FFF;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+#ClientList.Admin .FilterBy .FilterBy_item{
+    margin-right: 20px;
+}
+
+#ClientList.Admin .FilterBy .FilterBy_item:last-child{
+    margin-right: 0;
+}
+
+#ClientList.Admin .FilterBy h3 {
+    font-weight: 400;
+    margin-right: 10px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.Admin .dropdown_part .arrow {
+    box-shadow: none;
+    background: #FFF;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START Admin Grid Item PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+.AdminGridItem_part{
+    background: #FFFFFF;
+    box-shadow: 0px 6.95435px 9.7361px rgba(0, 0, 0, 0.056545);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 30px;
+    transition: all linear .4s;
+}
+
+.AdminGridItem_part:hover{
+    transform: translateY(-5px);
+}
+
+.AdminGridItem_content{
+    margin-top: 15px;
+}
+
+.AdminGridItem_content .img{
+    margin-right: 15px;
+}
+
+.AdminGridItem_content img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.AdminGridItem_content ul li{
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text_color2);
+    margin-bottom: 10px;
+}
+
+.AdminGridItem_content ul li:last-child{
+    margin-bottom: 0;
+}
+
+.AdminGridItem_content ul li span{
+    color: #5DCA08;
+    font-weight: 600;
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START Order Pages PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.Order_pages_tabs{
+    margin-top: 40px;
+}
+
+.Order_pages_tabs .nav-link{
+    background: #F5F5F5;
+    border-radius: 6px;
+    color: var(--text_color2);
+    margin-right: 20px;
+    padding: 8px 30px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.Order_pages_tabs .nav-link.active{
+    background: var(--admin_bg);
+}
+
+/* add_product */
+
+.add_product{
+    margin-top: 30px;
+}
+
+.add_product h4{
+    font-size: 20px;
+}
+
+.add_product .left{
+    background: #F8F8F8;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+}
+
+.add_product .nav-link {
+    color: var(--text_color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: left;
+}
+
+.add_product .nav-link:last-child{
+    margin-bottom: 0;
+}
+
+.add_product .nav-link.active{
+    background: none;
+    color: var(--admin_bg);
+}
+
+.product_information{
+    background: #F8F8F8;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.product_information .custome_input{
+    margin-bottom: 20px;
+}
+
+.product_information .custome_input:last-child{
+    margin-bottom: 0;
+}
+
+.product_information input{
+    background: #FFF;
+}
+
+.Admin textarea{
+    width: 100%;
+    background: #FFFFFF;
+    border:none;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.product_information .custome_input .Save{
+    background: var(--admin_bg);
+    color: #FFF;
+    padding: 5px 30px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.product_information .custome_input .Cancle{
+    background: #FE0707;
+    color: #FFF;
+    padding: 5px 30px;
+    border-radius: 5px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START Offers PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+.product_information.Offers{
+    margin-top: 30px;
+}
+
+
+/* Courier Content */
+
+.currier_content{
+    margin-top: 30px;
+}
+
+.currier_item{
+    background: #F8F8F8;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.currier_content .currier_item .img{
+    background: #FFF;
+    padding: 25px 11px;
+    border-radius: 10px;
+}
+
+.currier_content .currier_item .img img {
+    width: 100%;
+    height: 50px;
+    object-fit: fill;
+}
+
+.currier_content .currier_item .courier_switch{
+    margin-top: 20px;
+}
+
+.currier_content .currier_item .courier_switch p{
+    margin-bottom: 15px;
+}
+
+.currier_content .currier_item .courier_switch .form-check.form-switch {
+    height: 80px;
+    padding: 0;
+    text-align: center;
+}
+
+.currier_content .currier_item .courier_switch .form-check input {
+    width: 35%;
+    position: unset;
+    margin: 0;
+    float: unset;
+    height: 35px;
+    box-shadow: inset 0px 6px 8px 3px rgba(0, 0, 0, 0.1);
+}
+
+.currier_content .currier_item .courier_switch .form-check input:checked {
+    background-color: #76EE59;
+    border-color: #76EE59;
+}
+
+/* Plugins */
+
+.plugins_content .plugins_item {
+    background: #FFFFFF;
+    box-shadow: 0px 4.69076px 6.56707px rgba(0, 0, 0, 0.056545);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.plugins_content .plugins_item .img{
+    text-align: center;
+}
+
+.plugins_content .plugins_item img {
+    height: 100px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.plugins_content .plugins_item .text{
+    margin-top: 20px;
+}
+
+.plugins_content .plugins_item a{
+    background: #5DCA08;
+    padding: 3px 30px;
+    border-radius: 5px;
+    color: #FFF;
+}
+
+.plugins_Details {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(154, 154, 154, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.plugins_Details.left{
+    height: 100%;
+}
+
+.plugins_Details .img img{
+    height: 150px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.plugins_Details .text{
+    margin-top: 30px;
+}
+
+.plugins_Details .text h4{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+    border: 2px solid #407EF9;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.plugins_Details .text h4 span{
+    font-size: 18px;
+    color: var(--admin_bg);
+}
+
+.plugins_Details .amount{
+    margin-top: 50px;
+}
+
+.plugins_Details .amount h3{
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--admin_bg);
+}
+
+.plugins_Details .amount a{
+    margin-top: 10px;
+    padding: 8px 50px;
+    border-radius: 5px;
+    color: #FFF;
+    background: var(--admin_bg);
+}
+
+/* Plugins Details Right */
+.plugins_Details.right{
+    text-align: left;
+}
+
+.plugins_Details.right p{
+    margin-top: 15px;
+}
+
+.plugins_Details.right  h6{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #747474;
+    margin-top: 30px;
+}
+
+.plugins_Details.right ul{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.plugins_Details.right ul li{
+    color: var(--text_color2);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 31px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.plugins_Details.right ul li::before{
+    position: absolute;
+    content: '';
+    top: 12px;
+    left: -30px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text_color2);
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START Stock In PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+#ClientList.Admin .FilterBy_item.DownloadReport .dropdown_part {
+    background: #5DCA08;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+#ClientList .FilterBy .DownloadReport .dropdown_part span{
+    color: #FFF;
+    font-size: 16px;
+}
+
+#ClientList .FilterBy .DownloadReport .dropdown_part .arrow svg path{
+    fill: #FFF;
+}
+
+.FilterBy_item.d_flex.DownloadReport ul.dropdown-menu.show {
+    width: 100%;
+    transform: translate(0px, 36px) !important;
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START bulkSMS PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+#Total_order.Admin.bulkSMS .Total_order_item{
+    min-height: 215px;
+}
+
+#Total_order.Admin.bulkSMS .img{
+    padding: 20px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(86, 86, 86, 0.1); 
+    text-align: center;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FilterBy_item.AllClient .dropdown_part {
+    background: var(--admin_bg);
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.FilterBy_item.AllClient .dropdown_part span{
+    color: #FFF;
+}
+
+.product_information .custome_input .Save.Upload{
+    font-size: 14px;
+    background: var(--text_color2);
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START  PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START  PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START  PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- 
+    START  PART
+--------------------------------------------------------------------------------------------------------------------------------------------------- */
