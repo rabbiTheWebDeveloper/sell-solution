@@ -1,12 +1,13 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import swal from "sweetalert";
 const axios = require("axios");
 
-
 const userManage = () => {
-  const [user, setUser] = useState({});
-  let history = useHistory();
+  const history = useHistory();
+  const [user, setUser] = useState();
 
+  console.log(history);
 
   const registerUser = (data) => {
     axios.defaults.withCredentials = true;
@@ -14,38 +15,62 @@ const userManage = () => {
 
     axios.post("http://10.10.10.252/api/register", data).then((res) => {
       history.push("/dashboard");
-      setUser(res.data.data);
+      // setUser(res.data.data);
 
-      let tokenFrom = res.data.data.token;
-      let userName = res.data.data.name;
-      localStorage.setItem("token",tokenFrom);
-      localStorage.setItem("user",res.data.data);
-      // const { token } = res.data;
-      // localStorage.setItem("token", res.data.token);
-      // console.log(res.data);
-      // console.log(tokenFrom);
+      if (res.data.success == true) {
+        let tokenFrom = res.data.data.token;
+        let userName = res.data.data.name;
+        localStorage.setItem("token", tokenFrom);
+        localStorage.setItem("token_name", userName);
+        // const { token } = res.data;
+        // localStorage.setItem("token", res.data.token);
+        setUser(res.data.data);
+        swal({
+          title: res.data.message,
+          // text: res.data.message,
+          icon: "success",
+        });
+      } else {
+        swal({ title: res.data.message, icon: "success" });
+      }
     });
   };
-  const loginUser = (data) => {
-    axios.defaults.withCredentials = true;
-    axios.get("http://10.10.10.252/sanctum/csrf-cookie");
-    axios.post("http://10.10.10.252/api/login", data).then((res) => {
-      // history.push("/dashboard");
-      let tokenFrom = res.data.data.token;
-      let userName = res.data.name;
-      // localStorage.setItem("token", tokenFrom);
-      // localStorage.setItem("user",res.data.data);
-  
-      setUser(res.data.data);
-      console.log(res.data.data);
-      
-    });
-  };
+  // const loginUser = (data) => {
+  //   axios.defaults.withCredentials = true;
+  //   axios.get("http://10.10.10.252/sanctum/csrf-cookie");
+  //   axios.post("http://10.10.10.252/api/login", data).then((res) => {
+  //     if ((res.data.success = true)) {
+  //       let tokenFrom = res.data.data.token;
+  //       let userName = res.data.data.name;
+  //       localStorage.setItem("token", tokenFrom);
+  //       localStorage.setItem("token_name", userName);
+  //       // console.log(history);
+  //       history.push("/dashboard")
+  //       swal({
+  //         title: res.data.message,
+  //         // text: res.data.message,
+  //         icon: "success",
+  //       });
+
+  //       return res.data;
+  //     } else {
+  //       swal({
+  //         title: res.data.message,
+  //         // text: res.data.message,
+  //         icon: "success",
+  //       });
+  //     }
+
+  //     // setUser(res.data.data);
+  //   });
+  // };
+  // console.log(user)
 
   return {
     user,
     registerUser,
-    loginUser,
+   
+    
   };
 };
 

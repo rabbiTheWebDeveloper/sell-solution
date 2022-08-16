@@ -3,11 +3,11 @@ import { Link, useHistory } from "react-router-dom";
 import LoginBanner from "../../components/LoginBanner/LoginBanner";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import userManage from "../../hook/userManage";
-const axios = require("axios");
+
 
 const Register = () => {
   const {registerUser} =userManage()
-  const [user, setUser] = useState("");
+  
   const [registerData, setRegisterData] = useState({});
   const [nameErr, setNameErr] = useState("");
   const [phoneErr, setPhoneErr] = useState("");
@@ -16,7 +16,7 @@ const Register = () => {
   const [passwordConfErr, setPasswordConfErr] = useState("");
   const [showPass, setShowPass] = useState("");
   const [showCoPass, setCoShowPass] = useState(" ");
-  let history = useHistory();
+ 
   const handelOnChange = (e) => {
     const field = e.target.name;
     const value = e.target.value;

@@ -4,11 +4,13 @@ import LoginBanner from "../../components/LoginBanner/LoginBanner";
 import "./Login.css";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import useAuth from "../../hook/useAuth";
+import swal from "sweetalert";
+const axios = require("axios");
 
 
 const Login = () => {
-  
-  const {loginUser} =useAuth()
+  let history = useHistory();
+  // const {loginUser} =useAuth()
   const [loginData, setLoginData] = useState({});
   const [emailErr, setEmailErr] = useState(" ");
   const [passwordErr, setPasswordErr] = useState(" ");
@@ -41,7 +43,41 @@ const Login = () => {
       setPasswordErr(" ");
     }
 
-    loginUser(data)
+    // loginUser(data) 
+    
+      axios.defaults.withCredentials = true;
+      axios.get("http://10.10.10.252/sanctum/csrf-cookie");
+      axios.post("http://10.10.10.252/api/login", data).then((res) => {
+        if ((res.data.success = true)) {
+          let tokenFrom = res.data.data.token;
+          let userName = res.data.data.name;
+          localStorage.setItem("token", tokenFrom);
+          localStorage.setItem("token_name", userName);
+          history.push("/dashboard")
+  
+          swal({
+            title: res.data.message,
+            // text: res.data.message,
+            icon: "success",
+          });
+  
+         
+        } else {
+          swal({
+            title: res.data.message,
+            // text: res.data.message,
+            icon: "success",
+          });
+        }
+  
+        // setUser(res.data.data);
+      });
+    
+
+
+
+
+
     // axios.defaults.withCredentials = true;
     // axios.get("http://10.10.10.252/sanctum/csrf-cookie");
 
